@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <h1>Welcome {{ username }}!</h1>
+    <form method="POST" action="/predict">
+        <h2>Enter Symptoms</h2>
+        <label>Enter symptoms (separated by commas):</label><br>
+        <input type="text" name="symptom"><br><br>
+        <button type="submit">Predict Disease</button>
+    </form>
+
+    <div>
+        <p>{{ predict_text }}</p>
+    </div>
+    <a href="/logout">Logout</a>
+</body>
+</html>
